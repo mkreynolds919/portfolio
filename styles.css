@@ -7,56 +7,43 @@ body {
 
 .hero-wrapper {
     display: flex;
+    justify-content: center;
     position: relative;
-    padding: 4rem 8rem;
+    padding: 2rem 4rem;
     align-items: center;
 }
 
 
 
 .hero-img-container {
-    width: 50%;
     position: relative;
     z-index: 0;
 }
 
 .hero-img {
-    max-width: 100%;
+    width: 800px;
     border-radius: 12px;
-}
-
-
-.name {
-    position: absolute;
-    bottom: 28px;
-    left: 20px;
-    color: white;
-    font-size: 54px;
-    margin: 0;
-    opacity: 80%;
-    line-height: 50%;
+    object-fit: cover;
 }
 
 .hero-overlay {
-    background-color: aliceblue;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    max-width: 30%;
-    margin: 1rem;
+    background-color: transparent;
     padding: 2rem;
     z-index: 2;
-    position: absolute;
-    left: 45%;
     text-wrap: wrap;
     border-radius: 12px;
-
+    max-width: 30%;
+    color: rgb(212, 234, 255);
+    opacity: 85%;
 }
 
+
 h1 {
-    font-size: 54px;
+    font-size: clamp(2rem, 2vw, 46px);
 }
 
 .hero-overlay p {
-    font-size: 24px;
+    font-size: clamp(20px, 2vw, 1.5rem);
 }
 
 
@@ -73,6 +60,7 @@ h1 {
 
     .hero-img {
         border-radius: 0;
+        width: 100%;
     }
 
     .hero-overlay {
@@ -80,23 +68,16 @@ h1 {
         background-color: transparent;
         max-width: 100%;
         box-shadow: none;
-    }
-
-    .name {
-        font-size: 26px;
-        bottom: 15px;
-        left: 8px;
+        color: white;
     }
 
     .hero-overlay h1 {
         font-size: 46px;
-        color: white;
         text-align: center;
     }
 
     .hero-overlay p {
         font-size: 18px;
-        color: white;
         text-align: center;
     }
 }
