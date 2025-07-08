@@ -117,6 +117,48 @@ body {
     gap: 10px;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+    color: white;
+    padding: clamp(4rem, 4vh, 8rem) clamp(2vw, 12vw, 22rem);
+    margin-top: 10vh;
+}
+
+.contact-info-container svg {
+    width: 24px;
+    color: lightgreen;
+}
+
+.contact-info-container h1 {
+    font-size: clamp(1rem, 2.5vw, 54px);
+    color: lightgreen;
+}
+
+.contact-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 2rem;
+}
+
+.footer-img {
+    max-width: 400px;
+    border-radius: 12px;
+}
+
+.email, .phone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-icon-container {
+    display: flex;
+    gap: 20px;
+}
+
 @media (max-width: 600px) {
     .hero-wrapper {
         flex-direction: column;
