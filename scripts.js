@@ -1,13 +1,17 @@
 
+const projects = document.querySelectorAll(".project-card");
 
-const workContainer = document.querySelector(".work-container");
-const heroWrapper = document.querySelector(".hero-wrapper");
-const imgContainer = document.querySelector(".hero-img-container");
-const img = document.querySelector(".hero-img");
-
-const heroWrapperStyle = window.getComputedStyle(heroWrapper);
-const paddingLeft = parseFloat(heroWrapperStyle.paddingLeft);
-
-const padding = paddingLeft + (imgContainer.clientWidth - img.clientWidth);
-
-workContainer.style.paddingLeft = padding + "px";
+projects.forEach(project => {
+    project.addEventListener("mouseenter", () => {
+        project.style.transition = "transform 0.4s ease";
+        project.style.transform = "scale(1.1)";
+        const desc = project.querySelector(".project-desc-container");
+        desc.style.color = "lightgreen";
+    })
+    project.addEventListener("mouseleave", () => {
+        project.style.transition = "transform 0.4s ease";
+        project.style.transform = "scale(1)";
+        const desc = project.querySelector(".project-desc-container");
+        desc.style.color = "white";
+    })
+})
