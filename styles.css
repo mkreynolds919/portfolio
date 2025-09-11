@@ -91,7 +91,7 @@ body {
 
 .project-img-container {
     max-width: 100%;
-    max-height: 400px;
+    height: 400px;
 }
 
 .project-img {
